@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#nav {
+  position: absolute;
+  width: 0;
+  /* background-color: red; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  top: 5%;
+  left: 11%;
+  animation: scroll;
+  transition: 5s;
+  display: none;
+}
+#nav img {
+  height: 60px;
+}
+#nav > h5 {
+  font-size: 20px;
+  color: #fff;
+  font-family: sans-serif;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: #5894ae;
+  display: flex;
+  /* align-items: center;
+  justify-self: start; */
+}
+#page1 {
+  width: 26%;
+  height: 100%;
+  background-color: #5894ae;
+  /* background-color: red; */
+}
+#page2 {
+  width: 0%;
+  height: 100%;
+  /* background-color: blue; */
+  background-image: url(https://plus.unsplash.com/premium_photo-1692340973256-02f1cbd2db97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  animation: scroll;
+  transition: 6s;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #dbd2d557;
+}
+#page3 {
+  width: 10%;
+  height: 100%;
+  background-color: #5894ae;
+  /* background-color: black; */
+}
+#text-div {
+  /* width: 100px; */
+  position: absolute;
+  left: 11.7%;
+  top: 50%;
+  transform: translate(0, -50%);
+  /* background-color: red; */
+}
+#text-div > h1 {
+  color: #fff;
+  font-size: 85px;
+  font-family: sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: 78px;
+  text-transform: uppercase;
+  /* background: #000; */
+}
+
+#small-div {
+  width: 0px;
+  height: 400px;
+  /* background-color: red; */
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-image: url(https://plus.unsplash.com/premium_photo-1692340972681-cbafc43a248f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  animation: scroll;
+  transition: 8s;
+}
+#vertical-text {
+  position: absolute;
+  right: -78%;
+  top: -7%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* background-color: red; */
+
+  /* yee div ko rotate krta hai */
+  transform: rotate(90deg);
+  /* yee div ko top say niche lata hai  */
+  transform-origin: 0% 0%;
+  /* overflow-y: hidden; */
+}
+#vertical-text > h1 {
+  font-size: 70px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  /* yee letter k upr border bana ney ka km krta hai  */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+
+  color: transparent;
+  letter-spacing: 15px;
+  /* transform: rotate(90deg); */
+  /* overflow-y: hidden; */
+  animation: scroll;
+  animation-duration: 6s;
+  animation-direction: alternate-reverse;
+  /* animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+}
+@keyframes scroll {
+  0% {
+    transform: translatex(0);
+  }
+  100% {
+    transform: translatex(-100%);
+  }
+}
+.hidden {
+  position: absolute;
+  top: 0%;
+  height: 80px;
+
+  display: inline;
+  width: 500px;
+  background-color:#5894ae;
+  z-index: 99;
+  animation: scroll;
+  transition: 0.5s;
+}
+
+.hidden1 {
+  position: absolute;
+  top: 25%;
+  height: 80px;
+  display: inline;
+  width: 500px;
+  background-color: #5894ae;
+  z-index: 99;
+  animation: scroll;
+  transition: 0.5s;
+}
+.hidden2 {
+  position: absolute;
+  top: 50%;
+  height: 80px;
+  display: inline;
+  width: 500px;
+  background-color:#5894ae;
+  z-index: 99;
+  animation: scroll;
+  transition: 0.5s;
+}
+.hidden3 {
+  position: absolute;
+  top: 75%;
+  height: 80px;
+  display: inline;
+  width: 500px;
+  background-color:#5894ae;
+  z-index: 99;
+  animation: scroll;
+  transition: 0.5s;
+}
+.img-hidden {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  height: 80px;
+  display: inline;
+  width: 400px;
+  /* background-color: black; */
+  background-color:#5894ae;
+  z-index: 99;
+  animation: scroll;
+  transition: 0.5s;
+}
+@media only screen and (max-width : 600px) {
+  #page1{
+    display: none;
+  }
+  #page2{
+   max-width: px;
+   left: 50px;
+  
+  }
+  #text-div > h1{
+    font-size: 20px;
+    z-index: 999;
+  } 
+  #small-div{
+    z-index: 1;
+    max-width: 200px;
+    height: 300px;
+    animation-duration: 0.5s;
+    right: 0px;
+  }
+  .hidden{
+    width: 150px;
+    /* background-color: red; */
+  }
+  .hidden1{
+    width: 150px;
+    /* background-color: red; */
+  }
+  .hidden2{
+    width: 150px;
+    /* background-color: red; */
+  }
+  .hidden3{
+    width: 150px;
+    /* background-color: red; */
+  }
+}
